@@ -26,31 +26,33 @@ export const Header = () => {
       className={`${classes.header} ${isScrolled ? classes.scrolled : ''}`}
       ref={headerRef}
     >
-      <Logo />
-      <nav className={classes.nav}>
-        <ul className={classes.nav__list}>
-          {/* <li className={classes.nav__item}>
+      <div className={classes.headerInner}>
+        <Logo />
+        <nav className={classes.nav}>
+          <ul className={classes.nav__list}>
+            {/* <li className={classes.nav__item}>
             <Link href="/">
               <a className={currentRoute === '/' ? classes.active : ''}>Home</a>
             </Link>
           </li> */}
 
-          {/* <li className={classes.nav__item}>
+            {/* <li className={classes.nav__item}>
             <Link href="/projects">
               <a className={currentRoute === '/projects' ? classes.active : ''}>
                 Projects
               </a>
             </Link>
           </li> */}
-          {/* <li className={classes.nav__item}>
+            {/* <li className={classes.nav__item}>
             <Link href="/blog">
               <a className={currentRoute === '/blog' ? classes.active : ''}>
                 Blog
               </a>
             </Link>
           </li> */}
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

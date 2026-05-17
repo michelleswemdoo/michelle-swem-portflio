@@ -5,29 +5,32 @@
 @import '../../../sass/abstracts/variables';
 @import '../../../sass/abstracts/mixins';
 .header {
-  font-size: clamp(1.5rem, 2vw, 1.8rem);
-  font-weight: 700;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  color: $color-white;
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.headerInner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
-  color: $color-white;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 114rem;
   margin: 0 auto;
   padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
-  flex-wrap: wrap;
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  transition:
-    background-color 0.35s ease,
-    box-shadow 0.35s ease,
-    padding 0.35s ease;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
+  font-weight: 700;
 }
 
 @media only screen and (max-width: $bp-smallest) {
-  .header {
+  .headerInner {
     justify-content: center;
   }
 }
@@ -35,9 +38,12 @@
 .scrolled {
   background-color: $color-primary-1;
   box-shadow: 0 0.4rem 2.4rem rgba(0, 0, 0, 0.28);
-  padding-top: clamp(1.4rem, 2.5vw, 2rem);
-  padding-bottom: clamp(1.2rem, 2vw, 2rem);
-  animation: fadeInDown 0.6s ease-out both;
+
+  .headerInner {
+    padding-top: clamp(1.4rem, 2.5vw, 2rem);
+    padding-bottom: clamp(1.2rem, 2vw, 2rem);
+    animation: fadeInDown 0.6s ease-out both;
+  }
 }
 
 .nav {
