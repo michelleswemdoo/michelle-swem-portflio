@@ -2,12 +2,11 @@
 date: '2025-02-01'
 title: Form Builder Application
 label: Web App
-summary: A responsive form builder application built as a senior frontend engineering assignment, focused on component architecture, form logic, and scalable UI design patterns.
+summary: Built a scalable form builder system demonstrating advanced frontend architecture, reusable components, and test coverage.
 bullets:
-  - Built a dynamic, component-based form system with reusable UI blocks and clean state management
-  - Implemented form validation and structured input handling using modern React patterns
-  - Ensured cross-browser responsiveness and consistent UX across device sizes
-  - Added end-to-end and unit testing coverage using Playwright and React Testing Library for reliability
+  - Dynamic form system with reusable UI components
+  - Strong state handling and validation structure
+  - End-to-end testing with Playwright
 techStack:
   - React
   - TypeScript

@@ -73,7 +73,7 @@ export const ProjectItem = ({
               disabled={!demoUrl}
             />
             <ProjectAction
-              label="GitHub"
+              label="View Code"
               variant="secondary"
               href={repoUrl}
               disabled={!repoUrl}

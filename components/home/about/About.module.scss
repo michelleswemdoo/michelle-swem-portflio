@@ -13,9 +13,18 @@
   line-height: 1.05;
   font-weight: 700;
   color: $color-white;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   letter-spacing: -0.02em;
   word-break: break-word;
+}
+
+.role {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: $color-red;
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
 }
 
 .bio {
@@ -34,7 +43,32 @@
   }
 }
 
+.highlightsTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba($color-grey, 0.7);
+  margin: 0 0 1.2rem;
+}
+
 .highlights {
+  list-style: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  li {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba($color-grey, 0.85);
+  }
+}
+
+.meta {
   list-style: none;
   margin: 0 0 3.2rem;
   padding: 0;
@@ -50,10 +84,21 @@
   }
 }
 
+.metaLink {
+  color: rgba($color-grey, 0.9);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-white;
+  }
+}
+
 .container {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: clamp(2rem, 4vw, 4rem);
   flex-wrap: wrap;
 }
@@ -75,23 +120,7 @@
 @media only screen and (max-width: $bp-min-large) {
   .container {
     flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media only screen and (max-width: $bp-medium) {
-  .col-1-of-lg {
-    text-align: center;
-    width: 100%;
-  }
-
-  .bio {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .highlights {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -166,15 +195,12 @@
 }
 
 @media only screen and (max-width: $bp-medium) {
-  .cta {
-    justify-content: center;
-  }
-
   .bio {
     font-size: 1.55rem;
   }
 
-  .highlights li {
+  .highlights li,
+  .meta li {
     font-size: 1.4rem;
   }
 }
@@ -182,25 +208,19 @@
 @media only screen and (max-width: $bp-small) {
   .cta {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     width: 100%;
     max-width: 32rem;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .ctaBtn {
     width: 100%;
     justify-content: center;
   }
-
-  .ctaLink {
-    text-align: center;
-  }
 }
 
 .shape {
-  margin: 0 auto;
+  margin: 0;
   max-width: 100%;
 
   &__photo {
@@ -247,7 +267,6 @@
 @media only screen and (max-width: $bp-medium) {
   .socials {
     margin-top: 3rem;
-    justify-content: center;
     margin-bottom: 2rem;
   }
 }

@@ -2,19 +2,17 @@ import classes from './ProjectItem.module.scss';
 
 export const ProjectAction = ({ href, label, variant, disabled }) => {
   const className = [
-    classes.link,
-    variant === 'primary' ? classes.linkPrimary : classes.linkSecondary,
-    disabled ? classes.linkDisabled : '',
+    classes.btn,
+    variant === 'primary' ? classes.btnPrimary : classes.btnSecondary,
+    disabled ? classes.btnDisabled : '',
   ]
     .filter(Boolean)
     .join(' ');
 
-  const content = <span className={classes.linkLabel}>{label} →</span>;
-
   if (disabled) {
     return (
       <span className={className} aria-disabled="true">
-        {content}
+        {label}
       </span>
     );
   }
@@ -26,7 +24,7 @@ export const ProjectAction = ({ href, label, variant, disabled }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      {content}
+      {label}
     </a>
   );
 };

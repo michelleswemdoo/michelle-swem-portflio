@@ -1,18 +1,18 @@
 ---
 date: '2025-03-01'
-title: The Wild Oasis
+title: The Wild Oasis Cabin Booking Platform
 label: Web App
-summary: A cabin reservation web application built with Next.js and Supabase, featuring AI-powered conversational search and a seamless booking experience.
+summary: Built a modern cabin reservation platform with AI-powered search and seamless booking experience using Next.js and Supabase.
 bullets:
-  - Improved cabin discovery through natural-language search with intelligent ranking
-  - Streamlined booking flow with login-aware intent handling and server-side validation
-  - Enhanced user experience with conversational UI and real-time reservation management
+  - Natural-language cabin search with intelligent ranking
+  - Secure authentication and booking flow with server-side validation
+  - Conversational UI improving discovery and booking speed
 techStack:
   - Next.js
   - TypeScript
   - Supabase
-  - NextAuth
   - AI SDK
+  - Tailwind
 image: /images/the-wild-oasis.png
 liveUrl: https://the-wild-oasis-rho-gules.vercel.app
 githubUrl: https://github.com/michelleswemdoo/the-wild-oasis

@@ -1,17 +1,18 @@
 ---
 date: '2024-06-01'
-title: Shopify Storefront Refresh
+title: Shopify Storefront Optimization
 label: Shopify
-summary: Improved product discovery and performance to support stronger conversion on a high-traffic commerce experience.
+summary: Improved storefront performance and UX to increase product discoverability and conversion efficiency on a high-traffic e-commerce platform.
 bullets:
-  - Improved perceived load speed through leaner theme assets and layout prioritization
-  - Refined product listing UX to reduce steps to purchase
-  - Strengthened mobile checkout flow clarity to reduce drop-off
+  - +35% Core Web Vitals improvement through performance optimization
+  - Improved product discovery flow and reduced user friction
+  - Enhanced mobile UX and checkout clarity to reduce drop-off
 techStack:
   - Shopify
   - Liquid
   - JavaScript
   - Performance
+  - CRO
 image: /placeholder.svg
 liveUrl: ''
 githubUrl: https://github.com/michelleswemdoo
