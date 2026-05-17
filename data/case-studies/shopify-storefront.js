@@ -15,6 +15,7 @@ export const shopifyCaseStudy = {
   },
   problem: {
     title: 'Problem',
+    intro: 'The existing storefront experienced:',
     items: [
       'Slow page performance impacting engagement',
       'Poor product discoverability across listings',
