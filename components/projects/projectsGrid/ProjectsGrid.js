@@ -19,6 +19,7 @@ export const ProjectsGrid = ({ projects }) => {
           liveUrl={project.liveUrl}
           githubUrl={project.githubUrl}
           link={project.link}
+          caseStudyUrl={project.caseStudyUrl}
         />
       ))}
     </ul>

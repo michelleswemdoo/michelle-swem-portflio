@@ -19,4 +19,5 @@ liveUrl: https://assignment-snr-fe-engineer-swem-doo.vercel.app
 githubUrl: https://github.com/michelleswemdoo/assignment-snr-fe-engineer-swem-doowuese-michelle
 isFeatured: true
 link: https://assignment-snr-fe-engineer-swem-doo.vercel.app
+caseStudyUrl: /projects/case-study-form-builder
 ---

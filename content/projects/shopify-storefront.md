@@ -13,9 +13,10 @@ techStack:
   - JavaScript
   - Performance
   - CRO
-image: /placeholder.svg
+image: /images/work-1.png
 liveUrl: ''
 githubUrl: https://github.com/michelleswemdoo
 isFeatured: true
-link: ''
+link: /case-studies/shopify-storefront-optimization
+caseStudyUrl: /case-studies/shopify-storefront-optimization
 ---

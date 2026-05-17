@@ -1,0 +1,1 @@
+export { ShopifyCaseStudy } from './ShopifyCaseStudy';

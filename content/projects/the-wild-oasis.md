@@ -18,4 +18,5 @@ liveUrl: https://the-wild-oasis-rho-gules.vercel.app
 githubUrl: https://github.com/michelleswemdoo/the-wild-oasis
 isFeatured: true
 link: https://the-wild-oasis-rho-gules.vercel.app
+caseStudyUrl: /projects/case-study-the-wild-oasis
 ---

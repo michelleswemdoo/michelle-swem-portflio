@@ -59,6 +59,22 @@
   }
 }
 
+.mediaLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.titleLink {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover .title {
+    color: $color-red;
+  }
+}
+
 .media {
   display: block;
   width: 100%;
