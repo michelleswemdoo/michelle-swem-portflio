@@ -1,70 +1,54 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useState, useEffect, useRef } from 'react';
 import { Logo } from '../../UI/Logo';
 import classes from './Header.module.scss';
 
 export const Header = () => {
-  const [isScrollingUp, setIsScrollingUp] = useState(false);
-  const [lastScrollPosition] = useState(0);
-  const headerRef = useRef();
-
-  const scrollHandler = () => {
-    window.addEventListener(
-      'scroll',
-      () => {
-        const scrollPostion =
-          window.scrollY || document.documentElement.scrollTop;
-        if (scrollPostion > 1) {
-          setIsScrollingUp(true);
-        } else {
-          setIsScrollingUp(false);
-        }
-      },
-      false,
-    );
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      scrollHandler();
-    }, 100);
+    const handleScroll = () => {
+      const scrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
+      setIsScrolled(scrollPosition > 1);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      removeEventListener('scroll', scrollHandler);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollPosition]);
+  }, []);
 
-  const router = useRouter();
-  const currentRoute = router.pathname;
   return (
     <header
-      className={`${classes.header} ${isScrollingUp && classes.scrolled}`}
+      className={`${classes.header} ${isScrolled ? classes.scrolled : ''}`}
       ref={headerRef}
     >
       <Logo />
       <nav className={classes.nav}>
         <ul className={classes.nav__list}>
-          <li className={classes.nav__item}>
+          {/* <li className={classes.nav__item}>
             <Link href="/">
               <a className={currentRoute === '/' ? classes.active : ''}>Home</a>
             </Link>
-          </li>
+          </li> */}
 
-          <li className={classes.nav__item}>
+          {/* <li className={classes.nav__item}>
             <Link href="/projects">
               <a className={currentRoute === '/projects' ? classes.active : ''}>
                 Projects
               </a>
             </Link>
-          </li>
-          <li className={classes.nav__item}>
+          </li> */}
+          {/* <li className={classes.nav__item}>
             <Link href="/blog">
               <a className={currentRoute === '/blog' ? classes.active : ''}>
                 Blog
               </a>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

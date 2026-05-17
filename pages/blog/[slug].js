@@ -1,8 +1,12 @@
-import React from 'react';
-import { PostDetail } from '../../components/posts/postDetail';
+// import React from 'react';
+// import { PostDetail } from '../../components/posts/postDetail';
 
-const BlogDetailPage = () => {
-  return <PostDetail />;
-};
+// const BlogDetailPage = () => {
+//   return <PostDetail />;
+// };
 
-export default BlogDetailPage;
+// export default BlogDetailPage;
+
+export default function BlogDetailPage() {
+  return null;
+}

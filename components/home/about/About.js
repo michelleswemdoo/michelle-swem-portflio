@@ -1,48 +1,70 @@
 import { socials } from '../../../data/social-links';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '../../UI/Button';
 import classes from './About.module.scss';
-import { YouTubeIcon } from './youtubeIcon';
+
+const highlights = [
+  '⚡ Improved Core Web Vitals by 35%+',
+  '🛒 Built 25+ Shopify theme sections and reusable UI components',
+  '📈 Specialized in conversion optimization and technical SEO',
+  '🇩🇪 Currently learning German (A1)',
+];
 
 export const About = () => {
   return (
-    <section className={classes.About}>
+    <section className={classes.About} id="about">
       <div className="row">
         <div className={classes.container}>
           <div className={classes['col-1-of-lg']}>
             <ul className={classes.socials}>
               {socials.map((social) => (
                 <li className={classes.socials__list} key={social.name}>
-                  <Link href={social.url} title={social.name}>
-                    <a className={classes.socials__link}>{social.icon}</a>
+                  <Link href={social.url}>
+                    <a className={classes.socials__link} title={social.name}>
+                      {social.icon}
+                    </a>
                   </Link>
                 </li>
               ))}
             </ul>
-            <h1 className="heading-primary">Swem Michelle</h1>
-            <p className={classes['about-me']}>
-              I&apos;m a Frontend Developer and content writer with a great
-              passion for building things with code. I live in Nigeria where I
-              build Client facing user-interfaces for websites and apps.
+
+            <h1 className={classes.heroTitle}>Swem Michelle</h1>
+
+            <p className={classes.bio}>
+              I build fast, conversion-focused e-commerce experiences with Shopify
+              and modern frontend technologies.
             </p>
-            <p className={classes['about-me']}>
-              My believe is, When you embrace yourself and you believe in your
-              dreams, then you can be whatever you want to be as long as you put
-              your heart to it.
+
+            <p className={classes.bio}>
+              Frontend Engineer with 5+ years of experience developing scalable
+              e-commerce experiences using Shopify Liquid, JavaScript, TypeScript, Vue.js
+              and React. Based in Berlin and available for on-site, hybrid, and
+              remote roles across Germany.
             </p>
+
+            <ul className={classes.highlights}>
+              {highlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
 
             <div className={classes.cta}>
-              <Button className="btnround" link="#projects">
-                My Projects
-              </Button>
-
-              <Button
-                className="btnround btnround--red"
-                link="https://www.youtube.com/channel/UCyl_xQGeSaY--gQ8s1R7VtA/featured"
+              <Link href="#projects">
+                <a className={`${classes.ctaBtn} ${classes.ctaPrimary}`}>
+                  View Projects →
+                </a>
+              </Link>
+              <a
+                href="/Doowuese-Michelle-Swem-CV.pdf"
+                className={`${classes.ctaBtn} ${classes.ctaSecondary}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <YouTubeIcon />
-              </Button>
+                Download CV →
+              </a>
+              <Link href="#contact">
+                <a className={classes.ctaLink}>Contact Me →</a>
+              </Link>
             </div>
           </div>
 

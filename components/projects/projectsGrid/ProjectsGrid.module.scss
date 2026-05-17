@@ -1,13 +1,18 @@
 @import '../../../sass/abstracts/mixins';
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(54rem, 1fr));
-  grid-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.2rem, 5vw, 4.8rem);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: $bp-small) {
   .list {
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 4.8rem;
   }
 }

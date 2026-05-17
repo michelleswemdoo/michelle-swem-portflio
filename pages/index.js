@@ -2,12 +2,11 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { About } from '../components/home/about';
 import { Contact } from '../components/home/contact';
-import { FeaturedPosts } from '../components/home/featuredposts';
+// import { FeaturedPosts } from '../components/home/featuredposts';
 import { FeaturedProjects } from '../components/home/featuredprojects';
-import { getFeaturedProjects } from '../lib/projects-utils';
+import { getHomeProjects } from '../lib/projects-utils';
 
-const Home = (props) => {
-  const { projects } = props;
+const Home = ({ projects = [] }) => {
   return (
     <Fragment>
       <Head>
@@ -19,14 +18,14 @@ const Home = (props) => {
       </Head>
       <About />
       <FeaturedProjects projects={projects} />
-      <FeaturedPosts />
+      {/* <FeaturedPosts /> */}
       <Contact />
     </Fragment>
   );
 };
 
 export const getStaticProps = () => {
-  const featuredroject = getFeaturedProjects();
+  const featuredroject = getHomeProjects();
   return {
     props: {
       projects: featuredroject,

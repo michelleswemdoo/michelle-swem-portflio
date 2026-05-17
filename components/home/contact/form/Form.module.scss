@@ -8,48 +8,37 @@
   }
 
   &__box {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
   }
 
-  @media only screen and (max-width: $bp-large) {
-    &__box {
-      flex-direction: column;
-    }
+  &__box &__group {
+    margin-bottom: 0;
+    min-width: 0;
   }
 
+  &__name,
   &__email {
-    flex: 1;
-    margin-left: 15px;
-  }
-  @media only screen and (max-width: $bp-large) {
-    &__email {
-      margin-left: 0;
-    }
-  }
-
-  &__name {
-    flex: 0 0 50%;
-    margin-right: 15px;
-  }
-
-  @media only screen and (max-width: $bp-large) {
-    &__name {
-      margin-right: 0;
-    }
+    width: 100%;
+    min-width: 0;
   }
 
   &__input {
     font-family: inherit;
     font-size: 1.6rem;
     width: 100%;
+    max-width: 100%;
     color: $color-white;
     background-color: $color-primary-1;
-    padding: 2rem 3.5rem;
+    padding: clamp(1.4rem, 2.5vw, 2rem) clamp(1.6rem, 3vw, 3.5rem);
     border: none;
     border-radius: 6px;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    box-sizing: border-box;
+
     &:focus {
       outline: none;
       border: 1px solid $color-grey;
@@ -60,15 +49,39 @@
     }
   }
 
+  @media only screen and (max-width: $bp-medium) {
+    &__box {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    &__input {
+      font-size: 16px;
+      padding: 1.6rem 2rem;
+    }
+  }
+
   &__textarea {
-    padding: 3rem 3.5rem;
-    height: 16rem;
+    padding: clamp(2rem, 3vw, 3rem) clamp(1.6rem, 3vw, 3.5rem);
+    min-height: 16rem;
+    resize: vertical;
   }
 
   &__error {
     color: $color-error;
     font-size: 1.6rem;
     font-weight: normal;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  &__action {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem 2rem;
   }
 }
 

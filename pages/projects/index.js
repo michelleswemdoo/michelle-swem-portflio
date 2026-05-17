@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { AllProjects } from '../../components/projects/allprojects/AllProjects';
-import { getAllProjects } from '../../lib/projects-utils';
+import { getHomeProjects } from '../../lib/projects-utils';
 import Head from 'next/head';
 
 const ProjectPage = (props) => {
@@ -12,7 +12,7 @@ const ProjectPage = (props) => {
         <title>Michelle Swem&apos;s Site</title>
         <meta
           name="description"
-          content="I post about programming, web developement and general live stuffs"
+          content="Frontend and Shopify-focused project work — performance, UX, and measurable outcomes."
         />
       </Head>
       <AllProjects projects={projects} />
@@ -21,7 +21,7 @@ const ProjectPage = (props) => {
 };
 
 export const getStaticProps = () => {
-  const allProjects = getAllProjects();
+  const allProjects = getHomeProjects();
 
   return {
     props: {

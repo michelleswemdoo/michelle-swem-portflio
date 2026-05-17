@@ -6,29 +6,18 @@
 @import '../../../sass/abstracts/mixins';
 .footer {
   color: $color-grey;
-  padding: 10rem 0 0;
+  padding: clamp(6rem, 10vw, 10rem) clamp(2rem, 5vw, 4rem) 0;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 2vw, 1.8rem);
   background-color: $color-primary-1;
 
   &__text {
     margin-top: 3rem;
     margin-bottom: 1rem;
-    width: 44%;
+    width: 100%;
+    max-width: 52rem;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  @media only screen and (max-width: $bp-largest) {
-    &__text {
-      width: 55%;
-    }
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    &__text {
-      width: 80%;
-    }
   }
 
   &__socials {

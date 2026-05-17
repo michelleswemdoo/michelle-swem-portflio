@@ -1,7 +1,7 @@
 import { Form } from './form';
 export const Contact = () => {
   return (
-    <section>
+    <section id="contact">
       <div className="text-center margin-bottom">
         <h2 className="heading-secondary heading-secondary__white">
           Say Hello
